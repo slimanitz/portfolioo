@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // <=== enables static exports
-  reactStrictMode: true,
-  basePath: "/portfolioo",
-  distDir: "out",
+  output: "export",
+  images: {
+    loader: "akamai",
+    path: "",
+  },
+  assetPrefix: "./",
 };
 
-module.exports = nextConfig
+export default nextConfig;
+

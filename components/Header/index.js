@@ -23,12 +23,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         {({ open }) => (
           <>
             <div className="flex items-center justify-between p-2 laptop:p-0">
-              <h1
-                onClick={() => router.push("/")}
-                className="font-medium p-2 laptop:p-0 link"
-              >
-                {name}.
-              </h1>
+             
 
               <div className="flex items-center">
                 {data.darkMode && (
@@ -69,8 +64,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             >
               {!isBlog ? (
                 <div className="grid grid-cols-1">
-                  <Button onClick={handleWorkScroll}>Work</Button>
-                  <Button onClick={handleAboutScroll}>About</Button>
+                  <Button onClick={handleWorkScroll}>Travaux réalisés</Button>
+                  <Button onClick={handleAboutScroll}>A propos</Button>
                   {showBlog && (
                     <Button onClick={() => router.push("/blog")}>Blog</Button>
                   )}
@@ -80,7 +75,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                         window.open("mailto:hello@chetanverma.com")
                       }
                     >
-                      Resume
+                      CV
                     </Button>
                   )}
 
@@ -93,7 +88,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               ) : (
                 <div className="grid grid-cols-1">
                   <Button onClick={() => router.push("/")} classes="first:ml-1">
-                    Home
+                    Accueil
                   </Button>
                   {showBlog && (
                     <Button onClick={() => router.push("/blog")}>Blog</Button>
@@ -103,7 +98,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                       onClick={() => router.push("/resume")}
                       classes="first:ml-1"
                     >
-                      Resume
+                      CV
                     </Button>
                   )}
 
@@ -127,12 +122,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           onClick={() => router.push("/")}
           className="font-medium cursor-pointer mob:p-2 laptop:p-0"
         >
-          {name}.
+          
         </h1>
         {!isBlog ? (
           <div className="flex">
-            <Button onClick={handleWorkScroll}>Work</Button>
-            <Button onClick={handleAboutScroll}>About</Button>
+            <Button onClick={handleWorkScroll}>Travaux réalisé</Button>
+            <Button onClick={handleAboutScroll}>A propos</Button>
             {showBlog && (
               <Button onClick={() => router.push("/blog")}>Blog</Button>
             )}
@@ -141,7 +136,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 onClick={() => router.push("/resume")}
                 classes="first:ml-1"
               >
-                Resume
+                CV
               </Button>
             )}
 
@@ -161,7 +156,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           </div>
         ) : (
           <div className="flex">
-            <Button onClick={() => router.push("/")}>Home</Button>
+            <Button onClick={() => router.push("/")}>Accueil</Button>
             {showBlog && (
               <Button onClick={() => router.push("/blog")}>Blog</Button>
             )}
@@ -170,7 +165,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 onClick={() => router.push("/resume")}
                 classes="first:ml-1"
               >
-                Resume
+                CV
               </Button>
             )}
 

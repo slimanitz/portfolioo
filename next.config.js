@@ -6,6 +6,7 @@ const nextConfig = {
     path: "",
   },
   assetPrefix: "./",
+  distDir: "out",
 };
 
 module.exports = nextConfig
